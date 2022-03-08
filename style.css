@@ -6,7 +6,8 @@
 /* FOOTER */
 .footer_column ul {
   list-style-type: none;
-  line-height: 1.4rem;
+  line-height: 2rem;
+  font-family: var(--body--font);
 }
 .footer_column {
   border-top: solid black 2px;
@@ -27,6 +28,14 @@ a:active {
   display: flex;
   flex-direction: column;
 }
+.footer_logo {
+  width: 65px;
+  height: 60px;
+}
+.facebook {
+  margin-left: 0.5rem;
+}
+
 
 @media only screen and (min-width: 768px) {
   .footer_container {
@@ -36,7 +45,7 @@ a:active {
   .footer_column {
     border-top: solid black 2px;
     border-bottom: solid black 2px;
-    padding: 1.5rem;
+    padding: 3rem;
   }
   .one,
   .two {
@@ -46,7 +55,24 @@ a:active {
   .two,
   .three {
     width: 33.33vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
+  .one, .three {
+    flex-direction: column;
+  }
+  .one {
+    align-items: flex-start;
+  }
+  .two {
+    align-items: flex-end;
+  }
+  .three {
+    text-align: end;
+    align-items: flex-end;
+  }
+
 }
 /*GENERAL CLASSES*/
 .hidden {
