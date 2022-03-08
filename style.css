@@ -322,7 +322,7 @@ section.howWorks h4 {
     align-items: flex-end;
   }
 
-  /*HEADER DESKTOP*/
+  /*HEADER DESKTOP
   #accountRemove {
     display: none;
   }
@@ -334,7 +334,7 @@ section.howWorks h4 {
   }
   .menuContent {
     display: block;
-  }
+  } */
 
   /* PRODUCT PAGE */
 
@@ -363,8 +363,8 @@ section.howWorks h4 {
   }
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
   .AccountDesktop {
     display: none;
   }
-}
+}*/
