@@ -331,7 +331,7 @@ span {
     align-items: flex-end;
   }
 
-  /*HEADER DESKTOP*/
+  /*HEADER DESKTOP
   #accountRemove {
     display: none;
   }
@@ -342,8 +342,8 @@ span {
     display: none;
   }
   .menuContent {
-    /* display: block; */
-  }
+    display: block;
+  } */
 
   /* PRODUCT PAGE */
 
@@ -375,8 +375,8 @@ span {
   }
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
   .AccountDesktop {
     display: none;
   }
-}
+}*/
