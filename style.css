@@ -2,3 +2,74 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --h1--font: "gopher", sans-serif;
+  --body--font: "neue-haas-grotesk-display", sans-serif;
+  --bg-colour: #f6eff2;
+  --light--orange: #e8a473;
+  --med--orange: #e07b53;
+  --dark--orange: #a55546;
+}
+h1 {
+  font-family: var(--h1--font);
+}
+p {
+  font-family: var(--body--font);
+  line-height: 1.7rem;
+}
+h2 {
+  font-family: var(--body--font);
+  font-weight: 700;
+}
+/* HOME PAGE */
+main.homePage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: var(--bg-colour);
+}
+.heroImage {
+  width: 100vw;
+  height: auto;
+  border-bottom: solid 2px black;
+}
+.heroText {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 2rem;
+}
+.heroText a {
+  font-family: var(--body--font);
+  text-decoration: none;
+  color: black;
+}
+.howWorks {
+  grid-column: 1/3;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section.threeLinks {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+}
+section.threeLinks a.bigImg,
+section.threeLinks a.bigImg img {
+  width: 100vw;
+  border-top: solid 1px black;
+}
+section.threeLinks .smallImgs {
+  display: flex;
+}
+section.threeLinks .smallImgs img {
+  width: 50vw;
+  border-bottom: solid 2px black;
+  border-top: solid 2px black;
+  border-right: solid 2px black;
+}
+section.threeLinks .smallImgs img.imgRight {
+  border-right: none;
+}
