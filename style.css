@@ -194,12 +194,7 @@ section.howWorks h4 {
   align-self: center;
   justify-content: center;
 }
-/*.arrow {
-  background-image: url(down-arrow.svg);
-  height: 30px;
-  width: 25px;
-  background-repeat: no-repeat;
-}*/
+
 .stepOne,
 .stepTwo,
 .stepThree,
