@@ -28,26 +28,6 @@ a:active {
   flex-direction: column;
 }
 
-@media only screen and (min-width: 768px) {
-  .footer_container {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer_column {
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
-    padding: 1.5rem;
-  }
-  .one,
-  .two {
-    border-right: solid black 2px;
-  }
-  .one,
-  .two,
-  .three {
-    width: 33.33vw;
-  }
-}
 /*GENERAL CLASSES*/
 .hidden {
   display: none;
@@ -60,19 +40,20 @@ header {
   left: 0;
   right: 0;
   background-color: white;
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
 .headerFlex {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem 1rem 1rem;
-  border-bottom: solid 2px black;
+  padding: 0.6rem 1rem 0.5rem 1rem;
+  border-bottom: var(--line);
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 header a {
   text-decoration: none;
   color: black;
-}
-.AccountDesktop {
-  display: none;
 }
 
 .menuContent {
@@ -80,14 +61,26 @@ header a {
   padding: 0;
   display: none;
   width: 100vw;
+  height: 100vh;
 }
 .topnav a {
   display: block;
 }
 .topnav li {
-  line-height: 3rem;
+  line-height: 5rem;
   border-bottom: solid 1.5px black;
+  padding-left: 1rem;
+  font-size: 2rem;
 }
+.logo {
+  background-image: url(svgs/logo.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 50px;
+  height: 50px;
+}
+
+/*Variables*/
 :root {
   --h1--font: "gopher", sans-serif;
   --body--font: "neue-haas-grotesk-display", sans-serif;
@@ -95,6 +88,7 @@ header a {
   --light--orange: #e8a473;
   --med--orange: #e07b53;
   --dark--orange: #a55546;
+  --line: solid 1.5px black;
 }
 h1 {
   font-family: var(--h1--font);
@@ -197,5 +191,42 @@ section.threeLinks .smallImgs img.imgRight {
   }
   #infoPL {
     grid-row: 2 / 3;
+@media only screen and (min-width: 768px) {
+  .footer_container {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer_column {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    padding: 1.5rem;
+  }
+  .one,
+  .two {
+    border-right: solid black 2px;
+  }
+  .one,
+  .two,
+  .three {
+    width: 33.33vw;
+  }
+  #accountRemove {
+    display: none;
+  }
+  /*HEADER DESKTOP*/
+  .AccontCart a:nth-child(2) {
+    padding-left: 1rem;
+  }
+  #menu {
+    display: none;
+  }
+  .menuContent {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .AccountDesktop {
+    display: none;
   }
 }
