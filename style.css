@@ -3,43 +3,43 @@
   box-sizing: border-box;
 }
 
-/* FOOTER */
-.footer_column ul {
-  list-style-type: none;
-  line-height: 2rem;
-  font-family: var(--body--font);
-}
-.footer_column {
-  border-top: solid black 2px;
-  padding: 1.5rem;
-}
-.three {
-  border-bottom: solid black 2px;
-}
-.footer_column li a,
-.addtoCart,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer_container {
-  display: flex;
-  flex-direction: column;
-}
-.footer_logo {
-  width: 65px;
-  height: 60px;
-}
-.facebook {
-  margin-left: 0.5rem;
-}
-
 /*GENERAL CLASSES*/
 .hidden {
   display: none;
+}
+a {
+  text-decoration: none;
+  font-family: var(--body--font);
+  color: black;
+}
+h4 {
+  font-family: var(--body--font);
+  font-weight: 600;
+}
+/*Variables*/
+:root {
+  --h1--font: "gopher", sans-serif;
+  --body--font: "neue-haas-grotesk-display", sans-serif;
+  --bg-colour: #f4eeed;
+  --light--orange: #e8a473;
+  --med--orange: #e07b53;
+  --dark--orange: #a55546;
+  --line: solid 1.5px black;
+}
+h1 {
+  font-family: var(--h1--font);
+}
+p {
+  font-family: var(--body--font);
+  line-height: 1.7rem;
+}
+h2 {
+  font-family: var(--body--font);
+  font-weight: 700;
+}
+h3 {
+  font-family: var(--body--font);
+  font-weight: 500;
 }
 
 /*HEADER*/
@@ -88,32 +88,40 @@ header a {
   width: 50px;
   height: 50px;
 }
+/* FOOTER */
+.footer_column ul {
+  list-style-type: none;
+  line-height: 2rem;
+  font-family: var(--body--font);
+}
+.footer_column {
+  border-top: solid black 2px;
+  padding: 1.5rem;
+}
+.three {
+  border-bottom: solid black 2px;
+}
+.footer_column li a,
+.addtoCart,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
-/*Variables*/
-:root {
-  --h1--font: "gopher", sans-serif;
-  --body--font: "neue-haas-grotesk-display", sans-serif;
-  --bg-colour: #f6eff2;
-  --light--orange: #e8a473;
-  --med--orange: #e07b53;
-  --dark--orange: #a55546;
-  --line: solid 1.5px black;
+.footer_container {
+  display: flex;
+  flex-direction: column;
 }
-h1 {
-  font-family: var(--h1--font);
+.footer_logo {
+  width: 65px;
+  height: 60px;
 }
-p {
-  font-family: var(--body--font);
-  line-height: 1.7rem;
+.facebook {
+  margin-left: 0.5rem;
 }
-h2 {
-  font-family: var(--body--font);
-  font-weight: 700;
-}
-h3 {
-  font-family: var(--body--font);
-  font-weight: 500;
-}
+
 /* HOME PAGE */
 main.homePage {
   display: grid;
@@ -148,24 +156,91 @@ section.threeLinks {
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 section.threeLinks a.bigImg,
 section.threeLinks a.bigImg img {
-  width: 100vw;
   border-top: solid 1px black;
+  width: 100%;
 }
 section.threeLinks .smallImgs {
   display: flex;
 }
+section.threeLinks .smallImgs a {
+  border-top: solid 1.5px black;
+}
+section.threeLinks .smallImgs a.imgRight {
+  border-left: solid 1.5px black;
+}
 section.threeLinks .smallImgs img {
   width: 50vw;
-  border-bottom: solid 2px black;
-  border-top: solid 2px black;
-  border-right: solid 2px black;
 }
-section.threeLinks .smallImgs img.imgRight {
-  border-right: none;
+section.howWorks {
+  /* text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
 }
+section.howWorks h4 {
+  border: solid 1px black;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+/*.arrow {
+  background-image: url(down-arrow.svg);
+  height: 30px;
+  width: 25px;
+  background-repeat: no-repeat;
+}*/
+.stepOne,
+.stepTwo,
+.stepThree,
+.stepFour {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.stepOne p,
+.stepTwo p,
+.stepThree p,
+.stepFour p {
+  padding-bottom: 1.5rem;
+}
+.stepOne,
+.stepThree {
+  grid-column: 1;
+}
+.stepTwo {
+  grid-row: 2;
+}
+.stepTwo,
+.stepFour {
+  grid-column: 2;
+}
+.stepFour,
+.stepThree {
+  grid-row: 3;
+}
+.stepOne a,
+.stepTwo a {
+  border: solid 1px black;
+  background-color: white;
+  font-size: 14px;
+  padding: 0.5rem;
+  width: 8rem;
+  text-align: center;
+}
+
 /* product list page */
 #mainProductL,
 #mainPP {
