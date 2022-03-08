@@ -9,13 +9,16 @@
   line-height: 1.4rem;
 }
 .footer_column {
-  border-top: solid black 2px ;
+  border-top: solid black 2px;
   padding: 1.5rem;
 }
 .three {
-  border-bottom: solid black 2px ;
+  border-bottom: solid black 2px;
 }
-.footer_column li a, a:hover, a:focus, a:active {
+.footer_column li a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -31,17 +34,57 @@
     flex-direction: row;
   }
   .footer_column {
-    border-top: solid black 2px ;
+    border-top: solid black 2px;
     border-bottom: solid black 2px;
     padding: 1.5rem;
   }
-  .one, .two {
+  .one,
+  .two {
     border-right: solid black 2px;
   }
-  .one, .two, .three {
+  .one,
+  .two,
+  .three {
     width: 33.33vw;
-
   }
+}
+/*GENERAL CLASSES*/
+.hidden {
+  display: none;
+}
 
+/*HEADER*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 1rem;
+  border-bottom: solid 2px black;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+.AccountDesktop {
+  display: none;
+}
 
+.menuContent {
+  list-style-type: none;
+  padding: 0;
+  display: none;
+  width: 100vw;
+}
+.topnav a {
+  display: block;
+}
+.topnav li {
+  line-height: 3rem;
+  border-bottom: solid 1.5px black;
 }
