@@ -250,7 +250,7 @@ section.howWorks h4 {
   padding-top: 2%;
 }
 .listimg {
-  border: solid 2px black;
+  border: var(--line);
   width: 100%;
 }
 #infoPL,
@@ -267,20 +267,29 @@ section.howWorks h4 {
 }
 .productPage {
   padding: 1rem;
-  border: solid 2px black;
+  border-top: var(--line);
+  border-right: var(--line);
   line-height: 5rem;
 }
 .soapBarimg {
   width: 100%;
 }
-.productPageimg {
-  border: solid 2px black;
-}
 .addtoCart {
-  border: solid black 2px;
+  border: var(--line);
   padding: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
-
+span {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.cartPP {
+  padding-left: 32%;
+}
+.unitPP {
+  padding-left: 32%;
+}
 /****** MEDIA QUERIES *************/
 
 @media only screen and (min-width: 768px) {
@@ -333,7 +342,7 @@ section.howWorks h4 {
     display: none;
   }
   .menuContent {
-    display: block;
+    /* display: block; */
   }
 
   /* PRODUCT PAGE */
@@ -341,12 +350,15 @@ section.howWorks h4 {
   #mainPP {
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
   }
   .productPage {
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
   .productPageimg {
     grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   /* PRODUCT LIST*/
