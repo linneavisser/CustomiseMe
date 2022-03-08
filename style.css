@@ -50,14 +50,15 @@ header {
   right: 0;
   background-color: white;
   font-family: "neue-haas-grotesk-display", sans-serif;
+  z-index: 1;
 }
 .headerFlex {
   display: flex;
   justify-content: space-between;
-  padding: 0.6rem 1rem 0.5rem 1rem;
+  padding: 0rem 0.7rem 0rem 0.7rem;
   border-bottom: var(--line);
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 header a {
@@ -65,10 +66,13 @@ header a {
   color: black;
 }
 
+header a:hover {
+  color: var(--light--orange);
+}
+
 .menuContent {
   list-style-type: none;
   padding: 0;
-  display: none;
   width: 100vw;
 }
 .topnav a {
@@ -77,16 +81,33 @@ header a {
 .topnav li {
   line-height: 5rem;
   border-bottom: solid 1.5px black;
+  border-left: var(--line);
   padding-left: 1rem;
   font-size: 2rem;
 }
+.topnav li:last-child {
+  border-bottom: none;
+}
+.topnav {
+  display: none;
+}
 .logo {
-  background-image: url(svgs/logo.svg);
+  background-image: url(svgs/logo-med.svg);
   background-repeat: no-repeat;
   background-size: auto;
   width: 50px;
   height: 50px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
 }
+#menu {
+  padding-right: 0.6rem;
+  cursor: pointer;
+}
+#menu:hover {
+  color: var(--light--orange);
+}
+
 /* FOOTER */
 .footer_column ul {
   list-style-type: none;
@@ -294,6 +315,42 @@ span {
   padding-left: 32%;
 }
 /****** MEDIA QUERIES *************/
+@media only screen and (min-width: 958px) {
+  /*HEADER DESKTOP */
+  #accountRemove {
+    display: none;
+  }
+  .AccontCart a:nth-child(2) {
+    padding-left: 1rem;
+  }
+  .headerFlex {
+    display: grid;
+    grid-template-columns: 49% 1fr 20%;
+  }
+  .AccontCart {
+    justify-self: end;
+  }
+  #menu {
+    display: none;
+  }
+  #displayNav {
+    display: block;
+  }
+  .menuContent {
+    width: auto;
+  }
+  .topnav li {
+    line-height: 1rem;
+    border-bottom: none;
+    border-left: none;
+    font-size: 1rem;
+    padding: 0;
+  }
+  .topnav ul {
+    display: flex;
+    gap: 0.9rem;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   /* FOOTER */
@@ -332,20 +389,6 @@ span {
   .three {
     text-align: end;
     align-items: flex-end;
-  }
-
-  /*HEADER DESKTOP
-  #accountRemove {
-    display: none;
-  }
-  .AccontCart a:nth-child(2) {
-    padding-left: 1rem;
-  }
-  #menu {
-    display: none;
-  }
-  /*.menuContent {
-    display: block;
   }
 
   /* HOME PAGE */
@@ -398,8 +441,8 @@ span {
   }
 }
 
-/*@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 958px) {
   .AccountDesktop {
     display: none;
   }
-}*/
+}
