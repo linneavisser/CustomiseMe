@@ -2,3 +2,43 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*GENERAL CLASSES*/
+.hidden {
+  display: none;
+}
+
+/*HEADER*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 1rem;
+  border-bottom: solid 2px black;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+.AccountDesktop {
+  display: none;
+}
+
+.menuContent {
+  list-style-type: none;
+  padding: 0;
+  display: none;
+  width: 100vw;
+}
+.topnav a {
+  display: block;
+}
+.topnav li {
+  line-height: 3rem;
+  border-bottom: solid 1.5px black;
+}
