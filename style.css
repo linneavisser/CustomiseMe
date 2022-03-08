@@ -159,3 +159,43 @@ section.threeLinks .smallImgs img {
 section.threeLinks .smallImgs img.imgRight {
   border-right: none;
 }
+/* product list page */
+#mainProductL {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+.shopPL {
+  padding-left: 1rem;
+}
+.productList {
+  padding-top: 2%;
+}
+.listimg {
+  border: solid 2px black;
+  width: 100%;
+}
+#infoPL {
+  display: flex;
+  flex-direction: row;
+}
+.nameProductL,
+.priceProductL {
+  padding: 5%;
+}
+.priceProductL {
+  padding-left: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .productList {
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 80% 20%;
+  }
+  .listimg {
+    grid-row: 1 / 2;
+  }
+  #infoPL {
+    grid-row: 2 / 3;
+  }
+}
