@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-/*GENERAL CLASSES*/
+/*GENERAL styling*/
 .hidden {
   display: none;
 }
@@ -16,11 +16,15 @@ h4 {
   font-family: var(--body--font);
   font-weight: 600;
 }
+footer,
+body {
+  background-color: var(--bg-colour);
+}
 /*Variables*/
 :root {
   --h1--font: "gopher", sans-serif;
   --body--font: "neue-haas-grotesk-display", sans-serif;
-  --bg-colour: #f4eeed;
+  --bg-colour: #f8f6f4;
   --light--orange: #e8a473;
   --med--orange: #e07b53;
   --dark--orange: #a55546;
@@ -66,9 +70,9 @@ header a {
   color: black;
 }
 
-header a:hover,
-a.addtoCart:hover {
+header a:hover {
   color: var(--light--orange);
+  transition: all 0.2s ease-in-out;
 }
 
 .menuContent {
@@ -107,6 +111,7 @@ a.addtoCart:hover {
 }
 #menu:hover {
   color: var(--light--orange);
+  transition: all 0.2s ease-in-out;
 }
 
 /* FOOTER */
@@ -340,6 +345,7 @@ section.howWorks h4 {
   padding-left: 3rem;
   padding-right: 3rem;
   border-bottom: var(--line);
+  padding-bottom: 1rem;
 }
 
 .nameProductL,
@@ -352,9 +358,12 @@ section.howWorks h4 {
 
 /* product page */
 #mainPP {
-  display: flex;
-  flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 5rem;
+}
+.cartPP a:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
 }
 .productPage {
   padding-top: 3rem;
@@ -364,29 +373,45 @@ section.howWorks h4 {
   flex-direction: column;
   gap: 3rem;
 }
-.ingredients {
-  padding-bottom: 5rem;
+.extraPad {
+  padding-bottom: 4rem;
 }
 
 .soapBarimg {
   width: 100%;
 }
-.addtoCart {
+.cartButton {
   border: var(--line);
   padding: 0.5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  background-color: black;
+  color: white;
+}
+.unitButton {
+  border: var(--line);
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: white;
 }
 span {
   padding-left: 5%;
   padding-right: 5%;
 }
 .cartPP {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 /*.unitPP {
   padding-left: 32%;
 }*/
+
+/**CRATE SOAP PAGE**/
+
+.createSoap {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 /****** MEDIA QUERIES *************/
 @media only screen and (min-width: 958px) {
   /*HEADER DESKTOP */
@@ -515,11 +540,9 @@ span {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 10% 90%;
+    padding-top: 4rem;
   }
-  .productPage {
-    grid-column: 1;
-    grid-row: 2;
-  }
+
   .productPageimg {
     grid-column: 2;
     grid-row: 1 / 3;
@@ -535,6 +558,7 @@ span {
     padding-left: 3rem;
     padding-right: 3rem;
     border-bottom: none;
+    padding-bottom: 0;
   }
   .productPageimg {
     border-left: var(--line);
@@ -557,5 +581,14 @@ span {
 @media only screen and (max-width: 958px) {
   .AccountDesktop {
     display: none;
+  }
+  .cartButton {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .productPage {
+    padding-left: 1rem;
   }
 }
