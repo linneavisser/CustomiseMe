@@ -66,7 +66,8 @@ header a {
   color: black;
 }
 
-header a:hover {
+header a:hover,
+a.addtoCart:hover {
   color: var(--light--orange);
 }
 
@@ -317,7 +318,7 @@ section.howWorks h4 {
 #mainPP {
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 6rem;
 }
 .shopPL {
   padding-left: 1rem;
@@ -327,7 +328,7 @@ section.howWorks h4 {
   padding-top: 2%;
 }
 .listimg {
-  border: var(--line);
+  border: solid 1.5px var(--light--orange);
   width: 100%;
 }
 #infoPL {
