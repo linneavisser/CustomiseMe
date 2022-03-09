@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-    <title>PeroductPage</title>
+    <title>ProductPage</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/vna8uxu.css" />
   </head>
@@ -13,44 +13,53 @@
     <header>
       <div class="headerFlex">
         <div id="menu">Menu</div>
-       
-       <a href="index.html"><div class="logo">LOGO</div></a>
-       <div>
-         <a class="AccountDesktop" href="#">Account</a></li>
-         <a href="#">Cart</a>
-       </div>
-     </div>
-     <nav class="topnav">
-       <ul class="menuContent">
-         <li><a href="productList.html">Shop</a></li>
-         <li><a href="createStart.html">Create Soap</a></li>
-         <li><a href="#">About</a></li>
-         <li><a href="#">Workshops</a></li>
-       </ul>
-     </nav>
+        <nav class="topnav" id="displayNav">
+          <ul class="menuContent">
+            <li><a href="productList.html">Shop</a></li>
+            <li><a href="createStart.html">Create Soap</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Workshops</a></li>
+            <li id="accountRemove"><a href="#">Account</a></li>
+          </ul>
+        </nav>
+
+        <a href="index.html"><div class="logo"></div></a>
+        <div class="AccontCart">
+          <a class="AccountDesktop" href="#">Account</a></li>
+          <a href="#">Cart</a>
+        </div>
+      </div>
     </header>
     <main id="mainPP">
       <div id="infoPP">
-         <h3 class="nameProductL">name</h3>
-         <h3 class="priceProductL">DKK</h3>
+         <h3>name</h3>
+         <h3>DKK</h3>
        </div> 
        <article class="productPageimg">
          <img src="../../images/filler-mages.jpg" alt="soapbar" class="soapBarimg">
        </article>
-       <article class="productPage">
-         <h3>Colour</h3>
+       <section class="productPage">
+         <div class="color">
+          <h3>Colour</h3>
          <p>purple blue green yellow</p>
-         <h3>Essential oils</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia, commodi a nostrum consequatur accusantium quae excepturi maxime sit eaque esse error eius consectetur atque ratione deleniti dolores inventore deserunt!</p>
-         <h3>Ingredients</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nobis! Nisi, corrupti, est expedita cumque deserunt debitis possimus deleniti quae reprehenderit cupiditate fugiat iusto similique consectetur. Ad expedita autem architecto?</p>
+        </div>
+         <div class="oils">
+           <h3>Essential oils</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia</p>
+        </div>
+         <div class="ingredients">
+           <h3>Ingredients</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+
          <div class="unitPP">
            <a href="#" class="addtoCart">  - <span>0</span>  +  </a>
          </div>
          <div class="cartPP">
            <a href="#" class="addtoCart">Add to cart</a>
          </div>
-        </article>
+        </section>
 
     </main>
     <footer class="footer">
@@ -89,6 +98,7 @@
           </div>
       </div>
     </footer>
+    <script src="productPage.js"></script>
     <script src="general.js"></script>
   </body>
 </html>
