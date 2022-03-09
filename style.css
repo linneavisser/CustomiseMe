@@ -181,15 +181,12 @@ section.threeLinks {
 section.threeLinks a.bigImg {
   border-top: solid 1.5px black;
   width: 100vw;
+  height: 100vh;
   background-image: url(images/hero-image-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/*section.threeLinks a.bigImg img {
-  width: 100%;
-  height: 100%;
-}*/
 section.threeLinks .smallImgs {
   display: flex;
 }
@@ -198,10 +195,16 @@ section.threeLinks .smallImgs a {
 }
 section.threeLinks .smallImgs a.imgRight {
   border-left: solid 1.5px black;
+  background-image: url(images/about.png);
+  background-size: cover;
 }
-
+section.threeLinks .smallImgs a.imgLeft {
+  background-image: url(images/oil-picture.png);
+  background-size: cover;
+}
 section.threeLinks .smallImgs a {
   width: 50vw;
+  height: 50vh;
 }
 section.threeLinks .smallImgs img {
   width: 100%;
@@ -211,21 +214,13 @@ section.threeLinks .smallImgs img {
 
 section.howWorks {
   grid-column: 1/3;
-  /*padding: 3rem 3rem 6rem;*/
   align-items: center;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /*gap: 2.5rem;
-  row-gap: 5rem;*/
   border-top: var(--line);
 }
-h2 {
-  display: none;
-  grid-column: 1/3;
-  text-align: center;
-  padding-top: 6rem;
-}
+
 section.howWorks h4 {
   font-size: 1.2rem;
   display: flex;
@@ -250,7 +245,6 @@ section.howWorks h4 {
 .stepFour p {
   padding-bottom: 0.5rem;
 }
-
 .stepOne,
 .stepThree {
   grid-column: 1;
@@ -265,8 +259,9 @@ section.howWorks h4 {
 }
 .stepOne a,
 .stepTwo a {
-  border: solid 1px black;
-  background-color: white;
+  border: var(--line);
+  background-color: black;
+  color: white;
   font-size: 14px;
   padding: 0.5rem;
   width: 8rem;
@@ -274,7 +269,9 @@ section.howWorks h4 {
 }
 .stepOne a:hover,
 .stepTwo a:hover {
-  color: var(--light--orange);
+  color: black;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
 }
 /* grid lines steps */
 .stepTwo {
@@ -517,10 +514,12 @@ span {
   }
   .stepTwo {
     border-right: var(--line);
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
   .stepFour,
   .stepThree {
-    padding-bottom: 5.72rem;
+    padding-bottom: 5.78rem;
   }
   .howWorks p {
     padding-bottom: 3rem;
@@ -533,8 +532,12 @@ span {
   section.threeLinks .smallImgs {
     flex-direction: column;
   }
+  section.threeLinks a.bigImg {
+    height: 110vh;
+  }
   section.threeLinks .smallImgs a {
     width: 40vw;
+    height: 55vh;
   }
   section.threeLinks .smallImgs a.imgLeft {
     border-left: var(--line);
