@@ -201,13 +201,13 @@ section.threeLinks .smallImgs img {
 
 section.howWorks {
   grid-column: 1/3;
-  padding: 3rem 3rem 6rem;
+  /*padding: 3rem 3rem 6rem;*/
   align-items: center;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  row-gap: 5rem;
+  /*gap: 2.5rem;
+  row-gap: 5rem;*/
   border-top: var(--line);
 }
 h2 {
@@ -240,9 +240,7 @@ section.howWorks h4 {
 .stepFour p {
   padding-bottom: 0.5rem;
 }
-.stepTwo {
-  grid-row: 1;
-}
+
 .stepOne,
 .stepThree {
   grid-column: 1;
@@ -268,6 +266,25 @@ section.howWorks h4 {
 .stepTwo a:hover {
   color: var(--light--orange);
 }
+/* grid lines steps */
+.stepTwo {
+  grid-row: 1;
+  padding: 3rem;
+  border-bottom: var(--line);
+  border-left: var(--line);
+}
+.stepOne {
+  padding: 3rem;
+  border-bottom: var(--line);
+}
+.stepFour,
+.stepThree {
+  padding: 3rem 3rem 6rem;
+}
+.stepFour {
+  border-left: var(--line);
+}
+
 /* SCROLL TRY OUT */
 
 #scrollBanner {
@@ -325,6 +342,9 @@ section.howWorks h4 {
 .priceProductL {
   padding-left: 50%;
 }
+
+/* product page */
+
 .productPage {
   padding: 1rem;
   border-top: var(--line);
@@ -439,32 +459,21 @@ span {
   main.homePage h2 {
     display: none;
   }
-  .arrow {
-    display: block;
-    border-left: var(--line);
-    height: 250px;
-  }
   .stepFour,
   .stepOne,
   .stepThree,
   .stepTwo {
     align-self: flex-start;
-    padding-top: 2rem;
+    padding: 2rem;
+    border-bottom: none;
   }
-  .stepOne {
-    padding-left: 1rem;
+  .stepTwo {
+    border-right: var(--line);
   }
-  .stepFour {
-    padding-right: 1rem;
+  .stepFour,
+  .stepThree {
+    padding-bottom: 5.72rem;
   }
-  /*.arrow {
-    display: block;
-    background-image: url(svgs/Vector.svg);
-    background-repeat: no-repeat;
-    height: 25px;
-    width: 25px;
-    align-self: center;
-  }*/
   .howWorks p {
     padding-bottom: 3rem;
   }
