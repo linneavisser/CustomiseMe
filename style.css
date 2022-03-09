@@ -314,8 +314,7 @@ section.howWorks h4 {
   }
 }
 /* product list page */
-#mainProductL,
-#mainPP {
+#mainProductL {
   display: flex;
   flex-direction: column;
   padding-top: 6rem;
@@ -352,7 +351,11 @@ section.howWorks h4 {
 }
 
 /* product page */
-
+#mainPP {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
 .productPage {
   padding-top: 3rem;
   padding-left: 3rem;
