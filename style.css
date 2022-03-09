@@ -150,9 +150,8 @@ main.homePage {
   background-color: #f8f6f4;
 }
 /*hero image*/
-.heroImage {
+img.heroImage {
   width: 100vw;
-  height: auto;
   border-bottom: solid 2px black;
 }
 .heroText {
@@ -177,11 +176,15 @@ section.threeLinks {
 section.threeLinks a.bigImg {
   border-top: solid 1.5px black;
   width: 100vw;
+  background-image: url(images/hero-image-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-section.threeLinks a.bigImg img {
+/*section.threeLinks a.bigImg img {
   width: 100%;
   height: 100%;
-}
+}*/
 section.threeLinks .smallImgs {
   display: flex;
 }
@@ -191,6 +194,7 @@ section.threeLinks .smallImgs a {
 section.threeLinks .smallImgs a.imgRight {
   border-left: solid 1.5px black;
 }
+
 section.threeLinks .smallImgs a {
   width: 50vw;
 }
@@ -315,39 +319,29 @@ section.howWorks h4 {
 }
 /* product list page */
 #mainProductL {
-  display: flex;
-  flex-direction: column;
-  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33.333vw));
+  padding-top: 5rem;
 }
-.shopPL {
+h3.shopPL {
   padding-left: 1rem;
+  padding-bottom: 1rem;
   font-weight: 500;
-}
-.productList {
-  padding-top: 2%;
+  border-bottom: var(--line);
 }
 .listimg {
-  border: solid 1.5px var(--light--orange);
   width: 100%;
+  border-bottom: var(--line);
 }
 #infoPL {
   display: flex;
-}
-#infoPP {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  border-bottom: var(--line);
 }
 
 .nameProductL,
 .priceProductL {
-  padding: 5%;
-}
-.priceProductL {
-  padding-left: 50%;
+  padding: 0.5rem 1rem;
+  align-self: center;
 }
 
 /* product page */
@@ -366,6 +360,14 @@ section.howWorks h4 {
 }
 .ingredients {
   padding-bottom: 5rem;
+}
+#infoPP {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-bottom: var(--line);
 }
 
 .soapBarimg {
