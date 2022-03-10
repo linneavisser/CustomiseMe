@@ -21,6 +21,9 @@ function handleProductList(product) {
     //Clone it
     const clone = template.cloneNode(true);
     //Populate with data
+    clone
+      .querySelector(".productList a")
+      .setAttribute("href", `productPage.html?_id=${soap.id}`);
     clone.querySelector(".productList h3").textContent = soap.name;
     clone.querySelector(".productList p").textContent = `DKK ${soap.price}`;
     clone.querySelector(".productList img").src = soap.img;
