@@ -244,7 +244,6 @@ section.threeLinks a:hover {
   background-size: cover;
   background-position: center;
 }
-
 section.threeLinks .smallImgs {
   display: flex;
 }
@@ -253,10 +252,16 @@ section.threeLinks .smallImgs a {
 }
 section.threeLinks .smallImgs a.imgRight {
   border-left: solid 1.5px black;
+  background-image: url(images/about.png);
+  background-size: cover;
 }
-
+section.threeLinks .smallImgs a.imgLeft {
+  background-image: url(images/oil-picture.png);
+  background-size: cover;
+}
 section.threeLinks .smallImgs a {
   width: 50vw;
+  height: 50vh;
 }
 section.threeLinks .smallImgs img {
   width: 100%;
@@ -266,13 +271,10 @@ section.threeLinks .smallImgs img {
 
 section.howWorks {
   grid-column: 1/3;
-  /*padding: 3rem 3rem 6rem;*/
   align-items: center;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /*gap: 2.5rem;
-  row-gap: 5rem;*/
   border-top: var(--line);
 }
 
@@ -300,7 +302,6 @@ section.howWorks h4 {
 .stepFour p {
   padding-bottom: 0.5rem;
 }
-
 .stepOne,
 .stepThree {
   grid-column: 1;
@@ -570,10 +571,12 @@ span {
   }
   .stepTwo {
     border-right: var(--line);
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
   .stepFour,
   .stepThree {
-    padding-bottom: 5.72rem;
+    padding-bottom: 5.78rem;
   }
   .howWorks p {
     padding-bottom: 3rem;
