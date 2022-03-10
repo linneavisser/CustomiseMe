@@ -716,7 +716,7 @@ span {
   }
   .createSoapImg {
     position: relative;
-    background-image: url(/images/hero-image-2.png);
+    background-image: url(images/hero-image-2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
