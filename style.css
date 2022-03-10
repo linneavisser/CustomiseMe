@@ -424,6 +424,7 @@ div#infoPL:last-child {
 }
 
 .soapBarimg {
+  border-bottom: var(--line);
   width: 100%;
 }
 .cartButton {
@@ -678,7 +679,9 @@ span {
   .productPageimg {
     border-left: var(--line);
   }
-
+  .soapBarimg {
+    border-bottom: none;
+  }
   /* PRODUCT LIST*/
   #mainProductL {
     display: grid;
