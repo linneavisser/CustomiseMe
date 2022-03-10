@@ -4,14 +4,14 @@ const url = "https://customiseme-0b0d.restdb.io/rest/soaps";
 // API-Key
 const options = {
   headers: {
-    "x-apikey": "e557a215ef2bf824d17dd9b6f5819140f96b3",
+    "x-apikey": "6229dd86dced170e8c83a0e5",
   },
 };
 
 //fetch the data
 fetch(url, options)
   .then((res) => res.json())
-  .then((data) => handleBarList(data));
+  .then((data) => handleProductList(data));
 
 function handleProductList(product) {
   product.forEach((soap) => {
@@ -25,7 +25,7 @@ function handleProductList(product) {
     clone.querySelector(".productList p").textContent = `DKK ${soap.price}`;
     clone.querySelector(".productList img").src = soap.img;
     //Append it to the DOM
-    const main = document.querySelector("main.mainProductL");
+    const main = document.querySelector("main");
     main.appendChild(clone);
   });
 }

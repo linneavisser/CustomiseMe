@@ -177,9 +177,65 @@ section.threeLinks {
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  position: relative;
 }
-section.threeLinks a.bigImg {
+section.threeLinks .rightLinks {
+  display: flex;
+}
+section.threeLinks .leftBigImg {
+  border-top: var(--line);
+  width: 100vw;
+  height: 60vh;
+  background-image: url(images/hero-image-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.rightLinks .rightTopImg {
+  background-image: url(images/oil-picture.png);
+  background-size: cover;
+  background-position: center;
+  width: 50vw;
+  height: 30vh;
+  border-top: var(--line);
+}
+.rightLinks .rightBottomImg {
+  background-image: url(images/about.png);
+  background-size: cover;
+  background-position: center;
+  width: 50vw;
+  height: 30vh;
+  border-top: var(--line);
+  border-left: var(--line);
+}
+section.threeLinks a {
+  border: var(--line);
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding: 0.5rem;
+  width: 8rem;
+  text-align: center;
+  position: absolute;
+}
+section.threeLinks a:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.leftBigImg a {
+  top: 55%;
+  left: 8%;
+}
+.rightLinks .rightBottomImg a {
+  left: 60%;
+  top: 75%;
+}
+.rightLinks .rightTopImg a {
+  left: 8%;
+  top: 75%;
+}
+/*section.threeLinks a.bigImg {
   border-top: solid 1.5px black;
   width: 100vw;
   height: 40vh;
@@ -527,16 +583,18 @@ span {
   section.threeLinks {
     flex-direction: row;
   }
-  section.threeLinks .smallImgs {
+  section.threeLinks .rightLinks {
     flex-direction: column;
   }
-  section.threeLinks .smallImgs a {
+  .rightLinks .rightBottomImg,
+  .rightLinks .rightTopImg {
     width: 40vw;
+    height: 55vh;
   }
-  section.threeLinks .smallImgs a.imgLeft {
+  section.threeLinks .rightTopImg {
     border-left: var(--line);
   }
-  section.threeLinks a.bigImg {
+  section.threeLinks .leftBigImg {
     height: auto;
   }
 
