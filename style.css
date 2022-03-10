@@ -117,11 +117,11 @@ header a:hover {
   font-family: var(--body--font);
 }
 .footer_column {
-  border-top: solid black 2px;
+  border-top: var(--line);
   padding: 1.5rem;
 }
 .three {
-  border-bottom: solid black 2px;
+  border-bottom: var(--line);
 }
 .footer_column li a,
 .addtoCart,
@@ -152,21 +152,44 @@ main.homePage {
 }
 /*hero image*/
 img.heroImage {
+  grid-column: 1/3;
+  grid-row: 1;
   padding-top: 4rem;
   width: 100vw;
-  border-bottom: solid 2px black;
+  border-bottom: var(--line);
 }
 .heroText {
-  grid-column: 2;
+  grid-column: 1/3;
+  grid-row: 1;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding-bottom: 2rem;
+  justify-content: start;
+  padding-top: 6rem;
+}
+.heroText h1 {
+  font-size: 2rem;
+  padding-bottom: 6rem;
+}
+.heroText p {
+  display: none;
+  font-size: 1rem;
+  padding-bottom: 5rem;
 }
 .heroText a {
   font-family: var(--body--font);
   text-decoration: none;
+  border: var(--line);
+  background-color: white;
   color: black;
+  padding: 1rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+.heroText a:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
 }
 /* split three links*/
 section.threeLinks {
@@ -182,7 +205,7 @@ section.threeLinks .leftBigImg {
   border-top: var(--line);
   width: 100vw;
   height: 60vh;
-  background-image: url(images/hero-image-1.png);
+  background-image: url(images/hero-2-warm.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -196,7 +219,7 @@ section.threeLinks .leftBigImg {
   border-top: var(--line);
 }
 .rightLinks .rightBottomImg {
-  background-image: url(images/about.png);
+  background-image: url(images/palms.png);
   background-size: cover;
   background-position: center;
   width: 50vw;
@@ -206,8 +229,8 @@ section.threeLinks .leftBigImg {
 }
 section.threeLinks a {
   border: var(--line);
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 14px;
   padding: 0.5rem;
   width: 8rem;
@@ -215,8 +238,8 @@ section.threeLinks a {
   position: absolute;
 }
 section.threeLinks a:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   transition: all 0.2s ease-in-out;
 }
 .leftBigImg a {
@@ -225,43 +248,11 @@ section.threeLinks a:hover {
 }
 .rightLinks .rightBottomImg a {
   left: 60%;
-  top: 75%;
+  top: 90%;
 }
 .rightLinks .rightTopImg a {
-  left: 8%;
-  top: 75%;
-}
-/*section.threeLinks a.bigImg {
-  border-top: solid 1.5px black;
-  width: 100vw;
-  height: 40vh;
-  background-image: url(images/hero-image-1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-section.threeLinks .smallImgs {
-  display: flex;
-}
-section.threeLinks .smallImgs a {
-  border-top: solid 1.5px black;
-}
-section.threeLinks .smallImgs a.imgRight {
-  border-left: solid 1.5px black;
-  background-image: url(images/about.png);
-  background-size: cover;
-}
-section.threeLinks .smallImgs a.imgLeft {
-  background-image: url(images/oil-picture.png);
-  background-size: cover;
-}
-section.threeLinks .smallImgs a {
-  width: 50vw;
-  height: 50vh;
-}
-section.threeLinks .smallImgs img {
-  width: 100%;
-  height: 100%;
+  left: 10%;
+  top: 90%;
 }
 /* how it works*/
 
@@ -313,8 +304,8 @@ section.howWorks h4 {
 .stepOne a,
 .stepTwo a {
   border: var(--line);
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 14px;
   padding: 0.5rem;
   width: 8rem;
@@ -322,8 +313,8 @@ section.howWorks h4 {
 }
 .stepOne a:hover,
 .stepTwo a:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   transition: all 0.2s ease-in-out;
 }
 /* grid lines steps */
@@ -374,30 +365,32 @@ section.howWorks h4 {
 }
 /* product list page */
 #mainProductL {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33.333vw));
-  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 h3.shopPL {
   padding-left: 1rem;
+  padding-top: 5rem;
   padding-bottom: 1rem;
   font-weight: 500;
-  border-bottom: var(--line);
 }
 .listimg {
   width: 100%;
   border-bottom: var(--line);
+  border-top: var(--line);
 }
 #infoPL {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-bottom: var(--line);
-  padding-bottom: 1rem;
+  line-height: 2rem;
 }
-
+div#infoPL:last-child {
+  border-bottom: none;
+}
 .nameProductL,
 .priceProductL {
   padding: 0.5rem 1rem;
@@ -409,8 +402,8 @@ h3.shopPL {
   padding-top: 5rem;
 }
 .cartPP a:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   transition: all 0.2s ease-in-out;
 }
 .productPage {
@@ -441,8 +434,8 @@ h3.shopPL {
   padding: 0.5rem;
   padding-left: 10rem;
   padding-right: 10rem;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 .unitButton {
   border: var(--line);
@@ -500,6 +493,27 @@ span {
     display: flex;
     gap: 0.9rem;
   }
+  /* how works desktop*/
+  section.howWorks .stepFour,
+  section.howWorks .stepThree {
+    padding-bottom: 5.78rem;
+  }
+  /* HOME PAGE */
+  main.homePage .heroText h1 {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+  main.homePage .heroText p {
+    display: block;
+    font-size: 1.2rem;
+    padding-bottom: 15rem;
+  }
+  main.homePage .heroText a {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -510,13 +524,13 @@ span {
     flex-direction: row;
   }
   .footer_column {
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
+    border-top: var(--line);
+    border-bottom: var(--line);
     padding: 3rem;
   }
   .one,
   .two {
-    border-right: solid black 2px;
+    border-right: var(--line);
   }
   .one,
   .two,
@@ -542,6 +556,20 @@ span {
   }
 
   /* HOME PAGE */
+  .heroText h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  .heroText p {
+    display: block;
+    font-size: 1.2rem;
+    padding-bottom: 15rem;
+  }
+  .heroText a {
+    font-size: 1.5rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
 
   section.howWorks {
     display: flex;
@@ -568,7 +596,7 @@ span {
   }
   .stepFour,
   .stepThree {
-    padding-bottom: 5.78rem;
+    padding-bottom: 4rem;
   }
   .howWorks p {
     padding-bottom: 3rem;
@@ -595,6 +623,21 @@ span {
   }
   section.threeLinks .leftBigImg {
     height: auto;
+  }
+  section.threeLinks a {
+    font-size: 1.2rem;
+    width: 10rem;
+  }
+  .leftBigImg a {
+    top: 10%;
+  }
+  .rightLinks .rightTopImg a {
+    top: 10%;
+    left: 65%;
+  }
+  .rightLinks .rightBottomImg a {
+    top: 60%;
+    left: 65%;
   }
 
   /* PRODUCT PAGE */
@@ -628,17 +671,14 @@ span {
   }
 
   /* PRODUCT LIST*/
-  .productList {
+  #mainProductL {
     display: grid;
-    grid-template-columns: 33% 33% 34%;
-    grid-template-rows: 80% 20%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .listimg {
-    grid-row: 1 / 2;
+  article.productList {
+    border-right: var(--line);
   }
-  #infoPL {
-    grid-row: 2 / 3;
-  }
+
   /*create soap page*/
   .createSoap {
     display: grid;
