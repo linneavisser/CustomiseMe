@@ -1,11 +1,13 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
-//const url = ;
+const id = urlParams.get("_id");
+const url = "https://customiseme-0b0d.restdb.io/rest/soaps/" + id;
+
+//console.log(urlParams.get("id"));
 
 //API-key
 const options = {
   headers: {
-    "x-apikey": "620a2fc134fd6215658584c2",
+    "x-apikey": "6229dd86dced170e8c83a0e5",
   },
 };
 //fetch the data
