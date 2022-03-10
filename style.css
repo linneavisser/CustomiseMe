@@ -391,6 +391,9 @@ h3.shopPL {
   border-bottom: var(--line);
   line-height: 2rem;
 }
+#infoPL:hover {
+  color: var(--light--orange);
+}
 div#infoPL:last-child {
   border-bottom: none;
 }
@@ -637,6 +640,7 @@ span {
   .productPage {
     padding-top: 3.5rem;
     padding-left: 3rem;
+    padding-right: 3rem;
     border-top: var(--line);
     display: flex;
     flex-direction: column;
@@ -760,5 +764,6 @@ span {
     gap: 2rem;
     padding-left: 2rem;
     padding-top: 1rem;
+    padding-right: 2rem;
   }
 }
