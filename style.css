@@ -379,6 +379,9 @@ h3.shopPL {
   border-bottom: var(--line);
   border-top: var(--line);
 }
+.listimg:hover {
+  opacity: 0.7;
+}
 #infoPL {
   display: flex;
   justify-content: space-between;
